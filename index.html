@@ -43,7 +43,7 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <button id="case-decrease" class="btn btn-default"><i class="fas fa-minus"></i></button>
                            <input id="case-count" type="text" class="form-control text-center" value="1">
                            <button id="case-increase" class="btn btn-default"><i class="fas fa-plus"></i></button>
 
@@ -77,12 +77,22 @@
          </div>
       </div>
       <script>
-         // add click handler & work + button also update price
+         //case + button worked also update price
          document.getElementById("case-increase").addEventListener("click", function () {
             const caseInput = document.getElementById("case-count");
             // console.log(caseInput.value);
             const caseCount = parseInt(caseInput.value);
             const caseNewCount = caseCount + 1;
+            caseInput.value = caseNewCount;
+            const caseTotal = caseNewCount * 59;
+            document.getElementById("case-total").innerText = '$' + caseTotal;
+         })
+
+         //case - button worked also update price
+         document.getElementById("case-decrease").addEventListener("click", function () {
+            const caseInput = document.getElementById("case-count");
+            const caseCount = parseInt(caseInput.value);
+            const caseNewCount = caseCount - 1;
             caseInput.value = caseNewCount;
             const caseTotal = caseNewCount * 59;
             document.getElementById("case-total").innerText = '$' + caseTotal;
