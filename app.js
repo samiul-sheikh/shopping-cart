@@ -1,3 +1,16 @@
+// add click handler & eventListener for phone + button
+document.getElementById('phone-increase').addEventListener('click', function(){
+    // console.log('plus clicked')
+    const phoneInput = document.getElementById('phone-count');
+    // console.log(phoneInput.value)
+    const phoneCount = parseInt(phoneInput.value)
+    // console.log(phoneCount);
+    const phoneNewCount = phoneCount + 1;
+    phoneInput.value = phoneNewCount;
+    const phoneTotal = phoneNewCount * 1219;
+    document.getElementById('phone-total').innerText = '$' + phoneTotal;
+})
+
 /*
 //case + button worked also update price
 document.getElementById("case-increase").addEventListener("click", function () {
