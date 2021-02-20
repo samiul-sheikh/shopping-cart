@@ -19,7 +19,6 @@ document.getElementById("case-decrease").addEventListener("click", function () {
     const caseTotal = caseNewCount * 59;
     document.getElementById("case-total").innerText = '$' + caseTotal;
 })
-*/
 
 //case + button worked also update price
 document.getElementById("case-increase").addEventListener("click", function () {
@@ -30,6 +29,7 @@ document.getElementById("case-increase").addEventListener("click", function () {
 document.getElementById("case-decrease").addEventListener("click", function () {
     handleProductChange(false);
 });
+*/
 
 // adding function for case + & - button
 function handleProductChange(isIncrease) {
